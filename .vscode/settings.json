@@ -1,0 +1,7 @@
+{
+    "python.analysis.extraPaths": [
+        "./pyTelegramBotAPI/build/lib",
+        "./pyTelegramBotAPI",
+        "./ChatterBot"
+    ]
+}

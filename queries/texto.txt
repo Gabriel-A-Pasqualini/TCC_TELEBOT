@@ -1,0 +1,31 @@
+
+        marca = cars2[i][1]
+        modelo = cars2[i][2]
+        potencia = cars2[i][3]
+        ano = cars2[i][4]
+        cambio = cars2[i][5]
+        km = cars2[i][6]
+        combustivel = cars2[i][7]
+        final_da_placa = str(cars2[i][8])
+        cor = cars2[i][9]
+        licenciado = cars2[i][10]
+        IPVA_pago = cars2[i][11]
+        preco = str(cars2[i][12])
+        
+        info_carros = (
+        f'marca: {marca},'
+        +f'modelo:{modelo},'
+        +f'potencia: {potencia},'
+        +f'ano: {ano},'
+        +f'cambio: {cambio},'
+        +f'km: {km},'
+        +f'combustivel: {combustivel},'
+        +f'final_da_placa: {final_da_placa},'
+        +f'cor: {cor},'
+        +f'licenciado: {licenciado},'
+        +f'IPVA_pago: {IPVA_pago},'
+        +f'preco: {preco}'
+        )
+        print(info_carros)
+        
+        bot.send_message(msg.chat.id, f'{marca} {modelo} {potencia} ano {ano} com cambio {cambio} com {km} km ,combustivel: {combustivel}, final de placa é {final_da_placa}, por R{preco}')

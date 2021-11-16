@@ -1,0 +1,12 @@
+version: '3.7'
+
+services:
+  bot-db:
+    image: postgres:14.0-alpine
+    restart: always
+    environment:
+      - POSTGRES_USER=postgres # CHANGE HERE TO UPDATE DB USERNANE
+      - POSTGRES_PASSWORD=pass # CHANGE HERE TO UPDATE DB PASSWORD
+      - POSTGRES_DB=bot # DEFAULT DATABASE
+    ports:
+      - 5432:5432
