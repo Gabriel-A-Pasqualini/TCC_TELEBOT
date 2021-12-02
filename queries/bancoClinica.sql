@@ -18,19 +18,30 @@ CREATE TABLE consultas(
     date TIMESTAMP        
 );
 
-INSERT INTO consultas(status, date) VALUES ('disponivel', '2021-11-01 13:00:00');
-INSERT INTO consultas(status, date) VALUES ('disponivel', '2021-11-01 13:30:00');
-INSERT INTO consultas(status, date) VALUES ('disponivel', '2021-11-01 14:00:00');
-INSERT INTO consultas(status, date) VALUES ('disponivel', '2021-11-01 14:30:00');
-INSERT INTO consultas(status, date) VALUES ('disponivel', '2021-11-01 15:00:00');
-INSERT INTO consultas(status, date) VALUES ('disponivel', '2021-11-01 15:30:00');
-INSERT INTO consultas(status, date) VALUES ('disponivel', '2021-11-01 16:00:00');
-INSERT INTO consultas(status, date) VALUES ('disponivel', '2021-11-01 16:30:00');
+INSERT INTO consultas(status, date) VALUES ('disponível', '2021-11-01 13:00:00');
+INSERT INTO consultas(status, date) VALUES ('disponível', '2021-11-01 13:30:00');
+INSERT INTO consultas(status, date) VALUES ('disponível', '2021-11-01 14:00:00');
+INSERT INTO consultas(status, date) VALUES ('disponível', '2021-11-01 14:30:00');
+INSERT INTO consultas(status, date) VALUES ('disponível', '2021-11-01 15:00:00');
+INSERT INTO consultas(status, date) VALUES ('disponível', '2021-11-01 15:30:00');
+INSERT INTO consultas(status, date) VALUES ('disponível', '2021-11-01 16:00:00');
+INSERT INTO consultas(status, date) VALUES ('disponível', '2021-11-01 16:30:00');
 ==============================================================================================|
 INSERT INTO consultas(paciente, status, date) VALUES ('' ,'disponivel', '2021-11-02 HH:MM:SS');
 INSERT INTO consultas(paciente, status, date) VALUES ('' ,'disponivel', '2021-11-03 HH:MM:SS');
 INSERT INTO consultas(paciente, status, date) VALUES ('' ,'disponivel', '2021-11-04 HH:MM:SS');
 INSERT INTO consultas(paciente, status, date) VALUES ('' ,'disponivel', '2021-11-04 HH:MM:SS');
+
+
+CREATE TABLE convenios(
+    id SERIAL PRIMARY KEY,
+    convenio VARCHAR(255)        
+);
+INSERT INTO convenios(convenio) VALUES ('São Pedro');
+INSERT INTO convenios(convenio) VALUES ('São Miguel');
+INSERT INTO convenios(convenio) VALUES ('São Gabriel');
+INSERT INTO convenios(convenio) VALUES ('São Carlos');
+
 
 \l list databases
 \c [DBNAME] connect to new database, e.g., \c template1

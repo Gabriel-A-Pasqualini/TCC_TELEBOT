@@ -29,7 +29,7 @@ def cadastro(idTele,lname,fname):
 
 def horariosDisp():
     try:
-        sql = "SELECT * FROM consultas WHERE status='disponivel' ORDER BY id"
+        sql = "SELECT * FROM consultas WHERE status='disponível' ORDER BY id"
   
         cursor.execute(sql)
 
@@ -50,7 +50,7 @@ def find_user(id):
 
 def setHorario(nome,idtele,horario):
    
-    sql = f"UPDATE consultas SET paciente ='{nome}',id_telegram ='{idtele}' ,status = 'indisponivel' WHERE date = '{horario}'"
+    sql = f"UPDATE consultas SET paciente ='{nome}',id_telegram ='{idtele}' ,status = 'indisponível' WHERE date = '{horario}'"
     cursor.execute(sql)
     database.commit()
     
@@ -60,9 +60,16 @@ def conferirr(idtele):
     database.commit()
     
     return cursor.fetchall()
-    
+   
 def desmarcarr(idTele):
-    sql = f"UPDATE consultas SET paciente ='',id_telegram ='' ,status = 'disponivel' WHERE id_telegram = '{idTele}'"
+    sql = f"UPDATE consultas SET paciente ='',id_telegram ='' ,status = 'disponível' WHERE id_telegram = '{idTele}'"
     cursor.execute(sql)
     database.commit()
-    return 'Feito! Sua consulta foi desmarcada'    
+    return 'Feito! Sua consulta foi desmarcada'   
+
+def convenios():
+    sql = f"SELECT convenio FROM convenios"
+    cursor.execute(sql)
+    database.commit()
+    
+    return cursor.fetchall()
